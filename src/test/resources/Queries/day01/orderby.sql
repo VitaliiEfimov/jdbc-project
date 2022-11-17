@@ -15,7 +15,7 @@ order by SALARY;
 
 select *
 from EMPLOYEES
-order by SALARY asc;
+order by SALARY asc; --asc is default
 
 -- display all employees based salary in desc order
 select *

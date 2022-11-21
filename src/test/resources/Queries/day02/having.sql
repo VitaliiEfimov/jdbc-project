@@ -25,10 +25,10 @@ order by 2 desc;
 select FIRST_NAME,count(*) from EMPLOYEES
 group by FIRST_NAME
 having count(*)>1
-order by count(*) desc
+order by count(*) desc;
 
 
 select FIRST_NAME,count(*) as firstname_count from EMPLOYEES
 group by FIRST_NAME
 having count(*)>1
-order by count(*) desc
+order by count(*) desc;

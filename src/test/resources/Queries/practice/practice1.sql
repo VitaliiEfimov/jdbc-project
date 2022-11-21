@@ -4,21 +4,33 @@ select * from EMPLOYEES;
 -- -- 1. List all the employees first and last name with their salary in employees
 -- table
 select FIRST_NAME,LAST_NAME,SALARY from EMPLOYEES;
+
 -- -- 2. How many employees have salary less than 5000?
 select SALARY from EMPLOYEES
 where SALARY<5000;
+
 -- -- 3. How many employees have salary between 6000 and 7000?
 select SALARY from EMPLOYEES
 where SALARY between 6000 and 7000;
+
 -- -- 4. List all the different region_ids in countries table
-select distinct REGION_ID from COUNTRIES
+select distinct REGION_ID from COUNTRIES;
+
 -- -- 5. display the salary of the employee Grant Douglas (lastName: Grant,
 -- firstName: Douglas)
+select FIRST_NAME,LAST_NAME,SALARY
+from EMPLOYEES
+where FIRST_NAME='Douglas' and LAST_NAME='Grant';
 
 -- -- 6. display all department information from departments table
+select * from DEPARTMENTS
 -- -- if the department name values are as below
 -- -- IT , Public Relations , Sales , Executive
+where DEPARTMENT_NAME in('IT','Public Relations','Sales','Executive');
+
 -- -- 7. display the maximum salary in employees table
+
+
 -- -- 8. display the the minimum salary in employees table
 -- -- 9. display the average salary of the employees;
 -- -- 10. count the total numbers of the departments in departs table

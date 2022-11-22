@@ -45,6 +45,43 @@ public class PO2FlexibleNavigation {
         rs.last();
         System.out.println(rs.getString(1)+" "+rs.getString(2));
 
+        System.out.println("--- GET ROW ---");
+        // how many row we have
+        // getRow() --> the current row number; 0 if there is no current row
+        int rowNumber = rs.getRow();
+        System.out.println(rowNumber);  // 107
+
+        System.out.println("--- ABSOLUTE ---");
+        // jump into specified row
+        //rs.absolute(rowNumber)
+        rs.absolute(10);//David Bernstein -->true if the cursor is moved to a position in this ResultSet object; false if the cursor is before the first row or after the last row
+        System.out.println(rs.getString(1)+" "+rs.getString(2));
+        System.out.println(rs.getRow());//10
+
+        System.out.println("--- PREVIOUS ---");
+
+        rs.previous();
+        System.out.println(rs.getRow());
+        System.out.println(rs.getString(1)+" "+rs.getString(2));
+
+        // go first
+        rs.first();
+        rs.beforeFirst();
+//        System.out.println(rs.getRow());//1
+//        System.out.println(rs.getString(1)+" "+rs.getString(2));//Ellen Abel
+
+
+
+        System.out.println("--- PRINT ALL TABLE CONTENT DYNAMICALLY ---");
+
+        rs.previous();
+        while (rs.next()){
+        System.out.println(rs.getString(1)+" "+rs.getString(2));}
+
+
+
+
+
 
         // close connections
         rs.close();

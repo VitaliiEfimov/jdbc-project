@@ -54,3 +54,39 @@ order by empid;
 
 commit ;
 
+DELETE from scrumTeam
+where empid=1;
+
+select *from scrumTeam;
+
+DELETE from scrumTeam
+where jobTitle='Developer' and age>40;
+
+select *from scrumTeam;
+
+commit ;
+
+
+ALTER TABLE scrumTeam
+    add gender varchar(10);
+
+
+update scrumTeam
+set gender='Male'
+where empid=2;
+
+ALTER TABLE scrumTeam rename column salary to annual_salary;
+
+ALTER TABLE scrumTeam drop column gender;
+
+ALTER TABLE scrumTeam rename to agileteam;
+
+select *from agileteam;
+
+commit ;
+
+truncate table agileteam;
+
+drop table agileteam;
+
+commit ;

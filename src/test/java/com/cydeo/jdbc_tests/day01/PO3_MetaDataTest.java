@@ -20,7 +20,7 @@ public class PO3_MetaDataTest {
         Statement statement = conn.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE,ResultSet.CONCUR_READ_ONLY);
 
         // ResultSet will store data after execution.It stores only data (there is no table info )
-        ResultSet rs = statement.executeQuery("select * from EMPLOYEES");
+        ResultSet rs = statement.executeQuery("select FIRST_NAME,LAST_NAME,SALARY from EMPLOYEES");
 
         DatabaseMetaData databaseMetaData = conn.getMetaData();
 
@@ -49,11 +49,6 @@ public class PO3_MetaDataTest {
             }
             System.out.println();
         }
-
-
-
-
-
 
         // close connections
         rs.close();

@@ -21,14 +21,14 @@ public class PO_Library_DBTest {
 
 
         // get data from DB
-        String expectedBookCount=DB_Util.getFirstRowFirstColumn();
+        String actualBookCount=DB_Util.getFirstRowFirstColumn();
 
         /*
         Assume that we get this info from UI with automation
          */
 
         // get data from UI
-        String actualBookCount="3963";
+        String expectedBookCount="3967";
 
         /*
         Which one is expected / actual ?

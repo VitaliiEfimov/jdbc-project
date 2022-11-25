@@ -8,7 +8,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class P04_ListOfMaps {
+public class PO4_ListOfMaps {
 
     String dbUrl="jdbc:oracle:thin:@174.129.150.19:1521:XE";
     String dbUsername="hr";
